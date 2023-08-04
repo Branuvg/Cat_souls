@@ -13,6 +13,8 @@ public class gameover extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int prueba = 0; 
+    private int prueba3 = 2;
+    
     public void act()
     {
         // Add your action code here.
