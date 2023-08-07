@@ -46,10 +46,10 @@ public class MyWorld3 extends World
     
     public void ponerquesos(){
         if (objetosEliminados == 1) {
-            addObject (new queso3(), 50, 50);
+            addObject (new queso3(), 50, 350);
         }
         if (objetosEliminados == 2) {
-            addObject (new queso3(), 550, 350);
+            addObject (new queso3(), 300, 200);
         }
         if (objetosEliminados == 3) {
             Greenfoot.stop();
