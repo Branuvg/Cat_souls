@@ -37,11 +37,17 @@ public class MyWorld3 extends World
         addObject(miEnemigo, 300, 200);
         
         objetosEliminados = 0;
-    
+        
+        mostrarEtiqueta();
     }
  
     public void incrementarObjetosEliminados(){
         objetosEliminados++;
+        mostrarEtiqueta();
+    }
+    
+    public void mostrarEtiqueta(){
+        showText("Quesos comidos 3 / " + objetosEliminados, 110,25);
     }
     
     public void ponerquesos(){

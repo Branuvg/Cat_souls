@@ -33,13 +33,18 @@ public class MyWorld extends World
         
         objetosEliminados = 0;
     
-        
+        mostrarEtiqueta();
     }
  
     public void incrementarObjetosEliminados(){
         objetosEliminados++;
+        mostrarEtiqueta();
     }
     
+    public void mostrarEtiqueta(){
+        showText("Quesos comidos 3 / " + objetosEliminados, 110,25);
+    }
+
     public void ponerquesos(){
         if (objetosEliminados == 1) {
             addObject (new queso(), 50, 120);
