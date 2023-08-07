@@ -31,7 +31,7 @@ public class MyWorld extends World
         addObject(new gato1(), 300, 200);
         addObject(new queso(), 450, 120);
         
-        addObject(new portada(), 300, 370);
+        addObject(new portada(), 300, 201);
         
         objetosEliminados = 0;
     }    
