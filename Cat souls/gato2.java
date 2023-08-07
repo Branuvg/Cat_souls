@@ -16,7 +16,7 @@ public class gato2 extends Actor
      */
     public void act()
     {
-        move(7);
+        move(9);
         if (isAtEdge()){
             turn(180);
         }

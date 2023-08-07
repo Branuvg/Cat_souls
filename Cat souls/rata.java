@@ -17,7 +17,7 @@ public class rata extends Actor
         checkKeyPress();
         isTocandogato1();
         isTocandogato2();
-        //seguidor();
+        isTocandoseguidor();
         isTocandoqueso();
         isTocandoqueso2();
         isTocandoqueso3();
@@ -44,8 +44,6 @@ public class rata extends Actor
 
     public void isTocandogato1(){
         if (isTouching(gato1.class)){
-            System.out.println("Termina el juego");
-
             // Obtenemos la referencia al mundo
             World mundo = getWorld();
 
@@ -59,8 +57,6 @@ public class rata extends Actor
     }
     public void isTocandogato2(){
         if (isTouching(gato2.class)){
-            System.out.println("Termina el juego");
-
             // Obtenemos la referencia al mundo
             World mundo = getWorld();
 
@@ -72,7 +68,20 @@ public class rata extends Actor
             }
         }
     }
+    public void isTocandoseguidor(){
+        if (isTouching(seguidor.class)){
+            // Obtenemos la referencia al mundo
+            World mundo = getWorld();
 
+            //Eliminamos el objeto Arbol del mundo
+            Actor gato1Tocado = getOneIntersectingObject(seguidor.class);
+            if (gato1Tocado != null) {
+                Greenfoot.stop();
+                mundo.addObject(new gameover(), 300, 200);
+            }
+        }
+    }
+    
     public void isTocandoqueso(){
         if (isTouching(queso.class)){
             // Obtenemos la referencia al mundo

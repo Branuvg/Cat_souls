@@ -15,6 +15,7 @@ public class MyWorld3 extends World
      */
     public int objetosEliminados;
     private rata protagonista;
+    private seguidor miEnemigo;
     
     public rata getProtagonista(){
         return protagonista;
@@ -29,8 +30,11 @@ public class MyWorld3 extends World
         
         addObject(protagonista, 50, 350);
         addObject(new gato1(), 300, 200);
-        addObject(new queso(), 450, 50);
-        addObject(new queso2(), 450, 50);
+        addObject(new gato2(), 300, 200);
+        addObject(new queso3(), 450, 50);
+        
+        miEnemigo = new seguidor();
+        addObject(miEnemigo, 300, 200);
         
         objetosEliminados = 0;
     
@@ -42,10 +46,10 @@ public class MyWorld3 extends World
     
     public void ponerquesos(){
         if (objetosEliminados == 1) {
-            addObject (new queso(), 50, 50);
+            addObject (new queso3(), 50, 50);
         }
         if (objetosEliminados == 2) {
-            addObject (new queso(), 550, 350);
+            addObject (new queso3(), 550, 350);
         }
         if (objetosEliminados == 3) {
             Greenfoot.stop();

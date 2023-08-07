@@ -14,6 +14,24 @@ public class seguidor extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        MyWorld3 miMundo = (MyWorld3)this.getWorld();
+        perseguirAlPersonaje(miMundo.getProtagonista()); 
+    }
+    
+    private void perseguirAlPersonaje(rata prota){
+        int posXprotagonista = prota.getX();
+        int posYprotagonista = prota.getY();
+        
+        if (this.getX() < posXprotagonista){
+            this.setLocation(this.getX() + 2, this.getY());
+        } else if (this.getX() > posXprotagonista){
+            this.setLocation(this.getX() - 2, this.getY());
+        }
+        
+        if (this.getY() < posYprotagonista){
+            this.setLocation(this.getX(), this.getY() + 2);
+        } else {
+            this.setLocation(this.getX(), this.getY() - 2);
+        }
     }
 }
