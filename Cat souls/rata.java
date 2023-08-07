@@ -56,6 +56,12 @@ public class rata extends Actor
                 if (mundo instanceof MyWorld){
                     ((MyWorld)mundo).BackgroundSound.stop();
                 }
+                if (mundo instanceof MyWorld2){
+                    ((MyWorld2)mundo).BackgroundSound.stop();
+                }
+                if (mundo instanceof MyWorld3){
+                    ((MyWorld3)mundo).BackgroundSound.stop();
+                }
             }
         }
     }
@@ -69,6 +75,16 @@ public class rata extends Actor
             if (gato1Tocado != null) {
                 Greenfoot.stop();
                 mundo.addObject(new gameover(), 300, 200);
+                
+                if (mundo instanceof MyWorld){
+                    ((MyWorld)mundo).BackgroundSound.stop();
+                }
+                if (mundo instanceof MyWorld2){
+                    ((MyWorld2)mundo).BackgroundSound.stop();
+                }
+                if (mundo instanceof MyWorld3){
+                    ((MyWorld3)mundo).BackgroundSound.stop();
+                }
             }
         }
     }
@@ -82,6 +98,16 @@ public class rata extends Actor
             if (gato1Tocado != null) {
                 Greenfoot.stop();
                 mundo.addObject(new gameover(), 300, 200);
+                
+                if (mundo instanceof MyWorld){
+                    ((MyWorld)mundo).BackgroundSound.stop();
+                }
+                if (mundo instanceof MyWorld2){
+                    ((MyWorld2)mundo).BackgroundSound.stop();
+                }
+                if (mundo instanceof MyWorld3){
+                    ((MyWorld3)mundo).BackgroundSound.stop();
+                }
             }
         }
     }

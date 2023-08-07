@@ -15,6 +15,7 @@ public class MyWorld2 extends World
      */
     public int objetosEliminados;
     private rata protagonista;
+    public GreenfootSound BackgroundSound;
     
     public rata getProtagonista(){
         return protagonista;
@@ -35,6 +36,9 @@ public class MyWorld2 extends World
         objetosEliminados = 0;
         
         mostrarEtiqueta();
+        
+        BackgroundSound = new GreenfootSound("Bosque2_ost.wav");
+        BackgroundSound.playLoop();
     }
     
     public void incrementarObjetosEliminados(){
@@ -55,6 +59,7 @@ public class MyWorld2 extends World
         }
         if (objetosEliminados == 3) {
             Greenfoot.setWorld (new MyWorld3());
+            BackgroundSound.stop();
         }
     }
 }

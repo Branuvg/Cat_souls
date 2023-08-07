@@ -16,6 +16,7 @@ public class MyWorld3 extends World
     public int objetosEliminados;
     private rata protagonista;
     private seguidor miEnemigo;
+    public GreenfootSound BackgroundSound;
     
     public rata getProtagonista(){
         return protagonista;
@@ -39,6 +40,9 @@ public class MyWorld3 extends World
         objetosEliminados = 0;
         
         mostrarEtiqueta();
+        
+        BackgroundSound = new GreenfootSound("finale.wav");
+        BackgroundSound.playLoop();
     }
  
     public void incrementarObjetosEliminados(){
@@ -59,6 +63,7 @@ public class MyWorld3 extends World
         }
         if (objetosEliminados == 3) {
             Greenfoot.stop();
+            BackgroundSound.stop();
         }
     }
 }
