@@ -52,6 +52,10 @@ public class rata extends Actor
             if (gato1Tocado != null) {
                 Greenfoot.stop();
                 mundo.addObject(new gameover(), 300, 200);
+                
+                if (mundo instanceof MyWorld){
+                    ((MyWorld)mundo).BackgroundSound.stop();
+                }
             }
         }
     }
