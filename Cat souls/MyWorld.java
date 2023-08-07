@@ -31,11 +31,11 @@ public class MyWorld extends World
         addObject(new gato1(), 300, 200);
         addObject(new queso(), 450, 120);
         
+        addObject(new portada(), 300, 370);
+        
         objetosEliminados = 0;
+    }    
     
-        mostrarEtiqueta();
-    }
- 
     public void incrementarObjetosEliminados(){
         objetosEliminados++;
         mostrarEtiqueta();
